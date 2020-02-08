@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 2020_02_07_182326) do
   create_table "owners", force: :cascade do |t|
     t.string "name"
     t.string "address"
+    t.string "user_image"
+    t.string "background_image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

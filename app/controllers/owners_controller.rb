@@ -7,7 +7,7 @@ def show
 end 
 
 def create 
-    owner = Owner.find_or_create_by(params.require(:owner).permit(:name, :address))
+    owner = Owner.find_or_create_by(params.require(:owner).permit(:name, :address, :user_image, :background_image))
     if owner.save
         render :json =>  owner
     else

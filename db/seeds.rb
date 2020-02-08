@@ -10,7 +10,8 @@ require "faker"
 
 
 20.times do
- Owner.create(name: Faker::Name.first_name,  address: Faker::Address.street_address) 
+    seed = (0...50).map { ('a'..'z').to_a[rand(26)] }.join
+ Owner.create(name: Faker::Name.first_name,  address: Faker::Address.street_address, user_image: "https://picsum.photos/seed/#{seed}/250", background_image: "https://picsum.photos/seed/#{seed}/250") 
 end
 puts "owners created"
 
